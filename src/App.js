@@ -1,12 +1,13 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './pages/About';
+import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
-import NoPage from './pages/NoPage';
-import Portfolio from './pages/Portfolio';
+import About from './pages/About';
 import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import NoPage from './pages/NoPage';
 import Navigation from './components/Navigation';
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
     <Router>
       <Navigation />
       <Routes>
-        <Route path="/" element={<About />} />
+        <Route path="/" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="Portfolio" element={<Portfolio />} />
-        <Route path="Services" element={<Services />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="portfolio" element={<Portfolio />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </Router>
